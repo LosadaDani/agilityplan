@@ -18,7 +18,7 @@ public class ExercicesService implements ICRUDService<Exercices>{
     }
 
     @Override
-    public Optional<Exercices> findById(Long id) {
+    public Optional<Exercices> findById(long id) {
         return exercicesRepository.findById(id);
     }
 

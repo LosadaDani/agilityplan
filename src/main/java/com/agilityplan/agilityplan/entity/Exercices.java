@@ -8,17 +8,17 @@ public class Exercices {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Long idExercices;
+    private long idExercices;
 
     @Column(length = 150, nullable = false)
     private String name;
 
     @ManyToOne
     @Column(nullable = false, length = 20)
-    @Enumerated(value = EnumType.STRING) //TODO probar con ordinal, quiero que guarde el id
+    @Enumerated(value = EnumType.STRING)
     private TypeExercices type;
 
-    public Long getIdExercices() {
+    public long getIdExercices() {
         return idExercices;
     }
 

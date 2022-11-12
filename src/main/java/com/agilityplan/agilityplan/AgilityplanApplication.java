@@ -10,4 +10,7 @@ public class AgilityplanApplication {
 		SpringApplication.run(AgilityplanApplication.class, args);
 	}
 
+	//TODO Acabar exercicesController
+	//TODO Integrar Exceptions
+	//TODO Validaciones en los controller
 }
