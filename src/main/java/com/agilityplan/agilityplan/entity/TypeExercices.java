@@ -8,7 +8,13 @@ public enum TypeExercices {
      * y meter ahí los tipos que toquen.
      */
 
-    BASICS              ("Basics", 1),
+    BASICS,
+    RUNNING_CONTACT,
+    SLALOM,
+    CONDUCTION,
+    COURSE;
+
+    /*BASICS              ("Basics", 1),
     RUNNING_CONTACT     ("RunningContact", 2),
     SLALOM              ("Slalom", 3),
     CONDUCTION          ("Conduction", 4),
@@ -36,5 +42,5 @@ public enum TypeExercices {
 
     public void setId(long id) {
         this.id = id;
-    }
+    }*/
 }

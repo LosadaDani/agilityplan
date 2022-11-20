@@ -13,7 +13,8 @@ public class Exercices {
     @Column(length = 150, nullable = false)
     private String name;
 
-    @ManyToOne
+
+    @Column(nullable = false, length = 20)
     @Enumerated(value = EnumType.STRING)
     private TypeExercices type;
 
