@@ -8,5 +8,5 @@ public interface ICRUDService<T>{
     Optional<T> findById(long id);
     T create(T model);
     T update(T model);
-    void delete(Long id);
+    void delete(long id);
 }

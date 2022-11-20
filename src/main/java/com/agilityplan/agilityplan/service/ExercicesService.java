@@ -33,7 +33,7 @@ public class ExercicesService implements ICRUDService<Exercices>{
     }
 
     @Override
-    public void delete(Long id) {
+    public void delete(long id) {
         exercicesRepository.deleteById(id);
     }
 }

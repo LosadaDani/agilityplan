@@ -1,5 +1,7 @@
 package com.agilityplan.agilityplan.entity;
 
+import javax.persistence.OneToMany;
+
 public enum TypeExercices {
     /* Aunque los tipos de ejercicios la idea es que sean fijos, podría usarse en vez de enum como una tabla normal
      * (con el repository, service y controller pertinentes)

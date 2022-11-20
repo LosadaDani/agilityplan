@@ -14,7 +14,6 @@ public class Exercices {
     private String name;
 
     @ManyToOne
-    @Column(nullable = false, length = 20)
     @Enumerated(value = EnumType.STRING)
     private TypeExercices type;
 
