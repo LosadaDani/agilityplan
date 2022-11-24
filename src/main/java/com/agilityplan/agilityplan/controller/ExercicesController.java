@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -30,12 +31,12 @@ public class ExercicesController {
     }
 
     @PostMapping
-    public ResponseEntity<Exercices> create(@RequestBody Exercices exercices){
+    public ResponseEntity<Exercices> create(@Valid @RequestBody Exercices exercices){
         return new ResponseEntity<>(exercicesService.create(exercices), HttpStatus.CREATED);
     }
 
     @PutMapping
-    public ResponseEntity<Exercices> update(@RequestBody Exercices exercices){
+    public ResponseEntity<Exercices> update(@Valid @RequestBody Exercices exercices){
         return exercicesService.findById(exercices.getIdExercices())
                 .map(e -> ResponseEntity.ok(exercicesService.update(exercices)))
                 .orElseGet(() -> ResponseEntity.notFound().build());
