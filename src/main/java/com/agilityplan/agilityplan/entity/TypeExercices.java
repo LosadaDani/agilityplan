@@ -1,17 +1,43 @@
 package com.agilityplan.agilityplan.entity;
 
-public enum TypeExercices {
-    /* Aunque los tipos de ejercicios la idea es que sean fijos, podría usarse en vez de enum como una tabla normal
-     * (con el repository, service y controller pertinentes)
+import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
+@Entity
+public class TypeExercices {
+    /* Aunque los tipos de ejercicios la idea es que sean fijos, podría usarse con un enum
      * y meter ahí los tipos que toquen.
      */
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long idTypeExercices;
 
-    BASICS,
+    @Column(length = 20)
+    private String name;
+
+    public long getIdTypeExercices() {
+        return idTypeExercices;
+    }
+
+    public void setIdTypeExercices(long idTypeExercices) {
+        this.idTypeExercices = idTypeExercices;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /*BASICS,
     RUNNING_CONTACT,
     SLALOM,
     CONDUCTION,
     COURSE,
-    FITNESS;
+    FITNESS;*/
 
     /*BASICS              ("Basics", 1),
     RUNNING_CONTACT     ("RunningContact", 2),
